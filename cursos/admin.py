@@ -17,3 +17,4 @@ class CustomUserAdmin(UserAdmin):
 
 admin.site.register(Usuario, CustomUserAdmin)
 admin.site.register(Curso)
+
