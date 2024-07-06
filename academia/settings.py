@@ -75,8 +75,8 @@ WSGI_APPLICATION = 'academia.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'funciona',
-        'USER': 'amigo_trol',
+        'NAME': 'funcional',
+        'USER': 'postgres',
         'PASSWORD': 'queteden',
         'HOST': 'localhost',
         'PORT': '5432',
