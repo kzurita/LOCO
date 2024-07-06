@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% block titulo %} Registro de Usuario {% endblock %}
+{% block title %}Registro de Usuario{% endblock %}
 
-{% block contenido %}
+{% block content %}
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -26,20 +26,18 @@
                             <button type="submit" class="btn btn-primary">Registrarse</button>
                         </div>
                     </form>
-                    <p class="mt-3 text-center">¿Ya tienes cuenta?<a href="{% url 'login' %}">Iniciar Sesión aquí</a> </p>
+                    <p class="mt-3 text-center">¿Ya tienes cuenta? <a href="{% url 'login' %}">Iniciar Sesión aquí</a></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 {% endblock %}
 
-{% block js_extras %}
+{% block extra_js %}
 <script>
     {% if messages %}
-        {% for  message in messages %}
+        {% for message in messages %}
             Swal.fire({
                 icon: '{% if message.tags == "error" %}error{% else %}success{% endif %}',
                 title: '{% if message.tags == "error" %}Error{% else %}Éxito{% endif %}',
@@ -49,10 +47,7 @@
                     timer: 1500
                 {% endif %}
             });
-
         {% endfor %}
     {% endif %}
-
 </script>
-
 {% endblock %}
